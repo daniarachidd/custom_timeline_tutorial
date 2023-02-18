@@ -1,0 +1,10 @@
+const String follow = 'followed you.';
+const String likedReview = 'Liked your review.';
+const String avatar1 = 'assets/avatar1.jpg';
+const String avatar2 = 'assets/avatar2.jpg';
+const String avatar3 = 'assets/avatar3.png';
+const String avatar4 = 'assets/avatar4.jpg';
+const String hotel = 'assets/hotel.jpg';
+const double followerTileLength = 30;
+const double serviceTileLength = 220;
+const double hotelTileLength = 162;
