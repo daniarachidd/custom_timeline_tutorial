@@ -1,8 +1,8 @@
+import 'package:custom_timeline_tutorial/CustomTimelineTile/action_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:custom_timeline_tutorial/CustomTimelineTile/constants.dart';
 
 class NewFollower extends StatelessWidget {
-  final Widget action;
+  final ActionWidget action;
 
   const NewFollower({Key? key, required this.action}) : super(key: key);
 
@@ -14,7 +14,6 @@ class NewFollower extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20)
               ),
               child: Column(
-
                 children: [
                   Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

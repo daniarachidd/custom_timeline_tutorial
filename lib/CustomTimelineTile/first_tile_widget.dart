@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'indicator_widget.dart';
+
 class FirstTile extends StatelessWidget {
-   final bool isFirst;
   final Color color;
-  final double width= 50;
-  final double height =50;
-  final Widget child;
-  final Widget afterIndicator;
-  const FirstTile({Key? key, this.isFirst = false, required this.color, required this.child, required this.afterIndicator}) : super(key: key);
+  final Indicator afterIndicator;
+  final Icon icon;
+  const FirstTile({Key? key, required this.color, required this.afterIndicator, required this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +16,14 @@ class FirstTile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-
           Container(
-            width: width,
-            height: height,
+            width: 50,
+            height: 50,
             decoration: BoxDecoration(
               color: color,
               borderRadius: BorderRadius.circular(25)
             ),
-            child: child,
+            child: icon,
           ),
           const SizedBox(height: 2,),
           afterIndicator,

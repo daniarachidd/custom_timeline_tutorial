@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
 import 'action_widget.dart';
 
 class ServiceReview extends StatelessWidget {
-
-  final Widget action;
+  final ActionWidget action;
   const ServiceReview({Key? key,  required this.action}) : super(key: key);
 
   @override
@@ -34,9 +31,9 @@ class ServiceReview extends StatelessWidget {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Good Service!', style: TextStyle( color: Colors.black87,fontSize: 16,fontWeight: FontWeight.bold)),
-                        const Text('52 MIN AGO', style: TextStyle(color: Colors.black54)),
+                      children: const[
+                         Text('Good Service!', style: TextStyle( color: Colors.black87,fontSize: 16,fontWeight: FontWeight.bold)),
+                         Text('52 MIN AGO', style: TextStyle(color: Colors.black54)),
                       ],
                     ),
                     const SizedBox(height: 10,),

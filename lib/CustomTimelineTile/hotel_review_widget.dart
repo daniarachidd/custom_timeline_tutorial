@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:custom_timeline_tutorial/CustomTimelineTile/action_widget.dart';
-import 'package:custom_timeline_tutorial/CustomTimelineTile/constants.dart';
+import 'action_widget.dart';
 
 class HotelReviewWidget extends StatelessWidget {
-  String hotelImage;
-  String name, price, location, likes;
-  Widget action;
+  final String hotelImage;
+  final String name, price, location, likes;
+  final ActionWidget action;
 
-
-
-   HotelReviewWidget({Key? key, required this.action, required this.hotelImage, required this.name, required this.price, required this.location, required this.likes}) : super(key: key);
+  const HotelReviewWidget({Key? key, required this.action, required this.hotelImage, required this.name, required this.price, required this.location, required this.likes}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +14,6 @@ class HotelReviewWidget extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 0.75,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-
         ),
         child: Column(
           children: [

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Indicator extends StatelessWidget {
-
   final LineStyle lineStyle;
   const Indicator({Key? key, required this.lineStyle}) : super(key: key);
 
@@ -19,6 +18,5 @@ class Indicator extends StatelessWidget {
 class LineStyle {
   final Color color;
   final double height;
-
   LineStyle({required this.color,required this.height});
 }

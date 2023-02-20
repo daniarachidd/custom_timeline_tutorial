@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'indicator.dart';
+import 'indicator_widget.dart';
 
 class TimelineTile extends StatelessWidget {
-  //final Widget beforeIndicator;
-  final Widget afterIndicator;
+  final Indicator afterIndicator;
   final Widget rightContent;
   final String imagePath;
 
@@ -19,7 +17,6 @@ class TimelineTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Column(
-
             children: [
               Container(
                 width: 60,

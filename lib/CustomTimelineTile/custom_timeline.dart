@@ -1,35 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:custom_timeline_tutorial/CustomTimelineTile/action_widget.dart';
-import 'package:custom_timeline_tutorial/CustomTimelineTile/first_tile.dart';
+import 'package:custom_timeline_tutorial/CustomTimelineTile/first_tile_widget.dart';
 import 'package:custom_timeline_tutorial/CustomTimelineTile/service_review.dart';
 import 'package:custom_timeline_tutorial/CustomTimelineTile/constants.dart';
-import 'package:custom_timeline_tutorial/CustomTimelineTile/timeline_tile.dart';
+import 'package:custom_timeline_tutorial/CustomTimelineTile/activity_tile_widget.dart';
 
-import 'hotel_review.dart';
-import 'indicator.dart';
-import 'new_follower.dart';
+import 'hotel_review_widget.dart';
+import 'indicator_widget.dart';
+import 'new_follower_widget.dart';
 
 class CustomTimelineTile extends StatelessWidget {
   const CustomTimelineTile({super.key});
-
-
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
+    return Scaffold(
+        backgroundColor: Colors.grey[200],
+      body:  SingleChildScrollView(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20,),
             FirstTile(
-              isFirst: true,
-                color: Colors.white,
+              color: Colors.white,
               afterIndicator: Indicator(
                 lineStyle: LineStyle(color: Colors.grey, height: followerTileLength
                 ),
               ),
+              icon: const Icon(Icons.access_time, color: Colors.pink,),
 
-                child: const Icon(Icons.access_time),
+
 
             ),
             TimelineTile(
@@ -61,7 +61,7 @@ class CustomTimelineTile extends StatelessWidget {
                     time: '1 HOUR AGO',
                     action: likedReview,
                   ),
-                 ),
+                ),
                 imagePath: avatar2),
             TimelineTile(
               afterIndicator: Indicator(
@@ -88,8 +88,8 @@ class CustomTimelineTile extends StatelessWidget {
                   color: Colors.grey,
                 ),
               ),
-              rightContent: HotelReviewWidget(
-                action: const ActionWidget(
+              rightContent: const HotelReviewWidget(
+                action:  ActionWidget(
                   name: 'Sarah',
                   time: '2 HOURS AGO',
                   action: likedReview,
@@ -106,8 +106,8 @@ class CustomTimelineTile extends StatelessWidget {
             TimelineTile(
                 afterIndicator: Indicator(
                   lineStyle: LineStyle(
-                    height: 20,
-                    color: Colors.grey
+                      height: 20,
+                      color: Colors.grey
                   ),
                 ),
                 rightContent: const NewFollower(
@@ -123,7 +123,8 @@ class CustomTimelineTile extends StatelessWidget {
           ],
 
 
-      ),
+        ),
+      )
     );
   }
 }
